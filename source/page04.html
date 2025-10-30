@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style="">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans JP", sans-serif;
+        color: #333;
+        overflow: hidden;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: relative;
+      }
+      .header {
+        padding: 30px 60px 10px;
+      }
+      .header h1 {
+        color: #082044;
+        font-size: 36px;
+        margin: 0;
+        font-weight: 700;
+        white-space: nowrap; /* タイトルが改行されないようにする */
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+        padding: 10px 60px 40px;
+      }
+      .chart-container {
+        width: 60%;
+        height: 500px;
+      }
+      .explanation {
+        width: 40%;
+        padding: 20px 20px 20px 0;
+      }
+      .explanation p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .explanation ul {
+        padding-left: 20px;
+      }
+      .explanation li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .explanation li strong {
+        color: #082044;
+      }
+      .note {
+        font-size: 14px;
+        color: #666;
+        font-style: italic;
+        margin-top: 20px;
+      }
+      .market-panel {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+      .market-item {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+      .market-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .market-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      .market-color {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+      .tam-color {
+        background-color: rgba(8, 32, 68, 0.4);
+      }
+      .sam-color {
+        background-color: rgba(8, 32, 68, 0.7);
+      }
+      .som-color {
+        background-color: #d4af37;
+      }
+      .sam-rest-color {
+        background-color: rgba(8, 32, 68, 0.7);
+      }
+      .tam-rest-color {
+        background-color: rgba(8, 32, 68, 0.4);
+      }
+      .market-name {
+        font-weight: bold;
+        font-size: 18px;
+        color: #082044;
+      }
+      .market-detail {
+        padding-left: 30px;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .relationship {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-top: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+      .relationship p {
+        margin: 0 0 10px 0;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .relationship p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="slide-container">
+      <div class="header">
+        <h1>ターゲット市場と規模（試算）</h1>
+      </div>
+      <div class="main-content">
+        <div
+          class="chart-container"
+          id="market-chart"
+          _echarts_instance_="ec_1761811999745"
+          style="
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            position: relative;
+          "
+        >
+          <div
+            style="
+              position: relative;
+              width: 684px;
+              height: 500px;
+              padding: 0px;
+              margin: 0px;
+              border-width: 0px;
+              cursor: default;
+            "
+          >
+            <canvas
+              data-zr-dom-id="zr_0"
+              width="684"
+              height="500"
+              style="
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 684px;
+                height: 500px;
+                user-select: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                padding: 0px;
+                margin: 0px;
+                border-width: 0px;
+              "
+            ></canvas>
+          </div>
+          <div
+            class=""
+            style="
+              position: absolute;
+              display: block;
+              border-style: solid;
+              white-space: nowrap;
+              z-index: 9999999;
+              box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px;
+              transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+                visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+              background-color: rgb(255, 255, 255);
+              border-width: 1px;
+              border-radius: 4px;
+              color: rgb(102, 102, 102);
+              font: 14px / 21px 'Microsoft YaHei';
+              padding: 10px;
+              top: 0px;
+              left: 0px;
+              transform: translate3d(238px, 114px, 0px);
+              border-color: rgba(8, 32, 68, 0.4);
+              pointer-events: none;
+              visibility: hidden;
+              opacity: 0;
+            "
+          >
+            TAM（その他）: 26.25億円 (70%)
+          </div>
+        </div>
+        <div class="explanation">
+          <p>
+            日本製オーディオ機器の海外市場において、以下の3層の市場規模を定義しました：
+          </p>
+          <div class="market-panel">
+            <div class="market-item">
+              <div class="market-title">
+                <div class="market-color tam-color"></div>
+                <div class="market-name">TAM（Total Addressable Market）</div>
+              </div>
+              <p class="market-detail">
+                ¥37.5億（¥25〜50億）<br />
+                越境ECのオーディオ分野全体
+              </p>
+            </div>
+            <div class="market-item">
+              <div class="market-title">
+                <div class="market-color sam-color"></div>
+                <div class="market-name">
+                  SAM（Serviceable Available Market）
+                </div>
+              </div>
+              <p class="market-detail">
+                ¥11.25億（¥7.5〜15億）<br />
+                TAMの30% - 日本製中古・ハイエンド機器
+              </p>
+            </div>
+            <div class="market-item">
+              <div class="market-title">
+                <div class="market-color som-color"></div>
+                <div class="market-name">
+                  SOM（Serviceable Obtainable Market）
+                </div>
+              </div>
+              <p class="market-detail">
+                ¥3,375万（¥2,250万〜¥4,500万）<br />
+                SAMの0.3% - 初年度獲得目標
+              </p>
+            </div>
+          </div>
+          <div class="relationship">
+            <p><strong>階層関係（TAM⊃SAM⊃SOM）</strong></p>
+            <p>・全体市場（TAM）のうち30%が当社サービスの対象市場（SAM）</p>
+            <p>・SAMのうち0.3%が初年度の獲得目標市場（SOM）</p>
+          </div>
+          <p class="note">
+            ※前提：越境ECのうちHiFi/オーディオ比率を0.5〜1.0%と仮置き
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const chartDom = document.getElementById("market-chart");
+      const myChart = echarts.init(chartDom);
+
+      const option = {
+        tooltip: {
+          trigger: "item",
+          formatter: "{b}: {c}億円 ({d}%)",
+        },
+        series: [
+          {
+            name: "TAM",
+            type: "pie",
+            radius: ["50%", "70%"],
+            center: ["40%", "50%"],
+            avoidLabelOverlap: true,
+            itemStyle: {
+              borderRadius: 2,
+              borderWidth: 2,
+              borderColor: "#fff",
+            },
+            label: {
+              show: true,
+              formatter: "{b}: {c}億円\n({d}%)",
+            },
+            data: [
+              {
+                value: 11.25,
+                name: "SAM",
+                itemStyle: { color: "rgba(8, 32, 68, 0.7)" },
+              },
+              {
+                value: 26.25,
+                name: "TAM（その他）",
+                itemStyle: { color: "rgba(8, 32, 68, 0.4)" },
+              },
+            ],
+          },
+          {
+            name: "SAM",
+            type: "pie",
+            radius: ["25%", "45%"],
+            center: ["40%", "50%"],
+            avoidLabelOverlap: true,
+            itemStyle: {
+              borderRadius: 2,
+              borderWidth: 2,
+              borderColor: "#fff",
+            },
+            label: {
+              show: true,
+              formatter: function (params) {
+                if (params.name === "SOM") {
+                  return (
+                    params.name +
+                    ": " +
+                    params.value.toFixed(2) +
+                    "億円\n(" +
+                    params.percent +
+                    "%)"
+                  );
+                } else {
+                  return (
+                    params.name +
+                    ": " +
+                    params.value.toFixed(2) +
+                    "億円\n(" +
+                    params.percent +
+                    "%)"
+                  );
+                }
+              },
+            },
+            data: [
+              {
+                value: 0.3375,
+                name: "SOM",
+                itemStyle: { color: "#D4AF37" },
+              },
+              {
+                value: 11.2125,
+                name: "SAM（その他）",
+                itemStyle: { color: "rgba(8, 32, 68, 0.7)" },
+              },
+            ],
+          },
+        ],
+      };
+
+      myChart.setOption(option);
+
+      window.addEventListener("resize", function () {
+        myChart.resize();
+      });
+    </script>
+  </body>
+</html>

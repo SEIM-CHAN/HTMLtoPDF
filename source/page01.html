@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Japan Audio Export Service</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+        overflow: hidden;
+      }
+      .slide-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://page.gensparksite.com/slides_images/77519e963645417ebc6365d98e41de43.webp");
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.7);
+        z-index: -1;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 32, 68, 0.75);
+        z-index: 0;
+      }
+      .gold-accent {
+        color: #d4af37;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 720px;
+        padding: 60px;
+        text-align: center;
+      }
+      .logo-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d4af37;
+        padding: 15px 25px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide-bg"></div>
+      <div class="overlay"></div>
+      <div class="content-wrapper">
+        <div class="w-full flex flex-col items-center justify-center">
+          <div class="logo-box">
+            <i class="fas fa-volume-up gold-accent mr-3 text-3xl"></i>
+            <span class="gold-accent text-2xl font-bold tracking-wider"
+              >J-AES</span
+            >
+          </div>
+          <h1 class="text-white text-5xl font-bold mb-4 tracking-wider">
+            Japan Audio Export Service
+          </h1>
+          <div class="w-24 h-1 bg-white mb-8"></div>
+          <p class="text-white text-3xl mb-10 tracking-wider">
+            日本のオーディオ文化を世界へ
+          </p>
+          <div class="mt-12 bg-white bg-opacity-10 px-10 py-5 rounded-lg">
+            <p class="text-white text-xl mb-2">
+              投資家・助成金審査向け事業計画書
+            </p>
+          </div>
+        </div>
+        <div class="absolute bottom-12">
+          <p class="text-white text-lg opacity-80">2025年10月27日</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

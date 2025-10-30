@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>背景と市場課題 - Japan Audio Export Service</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+        background-color: #ffffff;
+        overflow: hidden;
+        display: flex;
+      }
+      .slide-sidebar {
+        width: 300px;
+        background-color: #082044;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .sidebar-accent {
+        position: absolute;
+        width: 8px;
+        height: 180px;
+        background-color: #d4af37;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .gold-accent {
+        color: #d4af37;
+      }
+      .content-wrapper {
+        flex: 1;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .bullet-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+      .bullet-icon {
+        background-color: rgba(8, 32, 68, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+      .bullet-icon i {
+        color: #082044;
+        font-size: 20px;
+      }
+      .bullet-content {
+        flex: 1;
+      }
+      .bullet-title {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+        color: #082044;
+      }
+      .bullet-text {
+        color: #4a5568;
+        line-height: 1.5;
+      }
+      .problem-solution {
+        display: flex;
+        margin-top: 10px;
+      }
+      .problem {
+        background-color: rgba(220, 38, 38, 0.1);
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin-right: 15px;
+        flex: 1;
+      }
+      .solution {
+        background-color: rgba(16, 185, 129, 0.1);
+        padding: 10px 15px;
+        border-radius: 4px;
+        flex: 1;
+      }
+      .label {
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+      }
+      .problem .label {
+        color: #dc2626;
+      }
+      .solution .label {
+        color: #10b981;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide-sidebar">
+        <div class="sidebar-accent"></div>
+        <h2 class="text-white text-3xl font-bold mb-4">背景と市場課題</h2>
+        <div class="w-16 h-1 bg-white opacity-60"></div>
+        <div class="mt-8 mb-4">
+          <i class="fas fa-search-dollar text-white opacity-80 text-5xl"></i>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="bullet-content">
+            <p class="bullet-title">海外での日本製オーディオ製品の評価</p>
+            <p class="bullet-text">
+              海外で日本製オーディオの評価・人気は高い一方、潜在需要が未充足
+            </p>
+            <div class="problem-solution">
+              <div class="problem">
+                <p class="label">問題</p>
+                <p class="text-sm">
+                  品質の高い日本製オーディオ機器を求める海外顧客が多いが、入手経路がない
+                </p>
+              </div>
+              <div class="solution">
+                <p class="label">解決策</p>
+                <p class="text-sm">
+                  日本国内の中古・ハイエンド市場への直接アクセスを提供するプラットフォーム構築
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="bullet-content">
+            <p class="bullet-title">現状の課題</p>
+            <p class="bullet-text">
+              ・日本の中古サイトへアクセス困難<br />・多くの店舗が海外発送非対応<br />・個人輸出手続きが煩雑
+            </p>
+            <div class="problem-solution">
+              <div class="problem">
+                <p class="label">問題</p>
+                <p class="text-sm">
+                  言語・決済・物流の障壁が高く、個人での越境購入は困難
+                </p>
+              </div>
+              <div class="solution">
+                <p class="label">解決策</p>
+                <p class="text-sm">
+                  購入代行＋決済代行＋国際発送をワンストップで提供し、障壁を解消
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bullet-item">
+          <div class="bullet-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="bullet-content">
+            <p class="bullet-title">越境EC市場の拡大</p>
+            <p class="bullet-text">
+              ・世界の越境EC市場規模：1.01兆USドル（2024年）、2034年には6.72兆USドルに拡大予測<br />・日本の越境EC販売額：中国向け2兆6,372億円（前年比8.5%増）、米国向け1兆5,978億円（前年比8.0%増）<br />・日本のBtoC-EC市場：26兆1,225億円（2024年）
+            </p>
+            <div class="problem-solution">
+              <div class="problem">
+                <p class="label">問題</p>
+                <p class="text-sm">
+                  オーディオ専門の越境ECサービスが不在で、拡大市場の機会損失
+                </p>
+              </div>
+              <div class="solution">
+                <p class="label">解決策</p>
+                <p class="text-sm">
+                  10%手数料の前金制ビジネスモデルで、リスクを最小化しながら市場機会を捉える
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-6 right-8">
+          <p class="text-gray-400 text-sm">J-AES Business Plan | 3</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

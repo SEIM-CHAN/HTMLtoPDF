@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+venv/
+ENV/
+env/
+
+# VS Code
+.vscode/
+
+# Playwright browsers (local cache)
+.playwright/
+
+# macOS
+.DS_Store
+
+# Logs and local output
+*.log
+output.pdf

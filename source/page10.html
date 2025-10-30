@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>競合分析と差別化 - Japan Audio Export Service</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+        background-color: #ffffff;
+        overflow: hidden;
+        display: flex;
+      }
+      .slide-sidebar {
+        width: 300px;
+        background-color: #082044;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .sidebar-accent {
+        position: absolute;
+        width: 8px;
+        height: 180px;
+        background-color: #d4af37;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .gold-accent {
+        color: #d4af37;
+      }
+      .content-wrapper {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .comparison-container {
+        flex: 1;
+        display: flex;
+        margin-top: 20px;
+      }
+      .column {
+        flex: 1;
+        padding: 20px;
+        position: relative;
+      }
+      .left-column {
+        border-right: 1px solid #e2e8f0;
+      }
+      .column-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .column-icon {
+        background-color: rgba(8, 32, 68, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        flex-shrink: 0;
+      }
+      .column-icon i {
+        color: #082044;
+        font-size: 20px;
+      }
+      .feature-group {
+        margin-bottom: 24px;
+      }
+      .feature-title {
+        font-weight: 600;
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+        color: #082044;
+        display: flex;
+        align-items: center;
+      }
+      .feature-title i {
+        margin-right: 10px;
+        width: 20px;
+      }
+      .feature-list {
+        margin-left: 30px;
+      }
+      .feature-item {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        color: #4a5568;
+        line-height: 1.5;
+      }
+      .feature-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #082044;
+      }
+      .highlight-box {
+        background-color: rgba(212, 175, 55, 0.1);
+        border-left: 3px solid #d4af37;
+        padding: 15px;
+        margin-top: 15px;
+      }
+      .divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #e2e8f0;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide-sidebar">
+        <div class="sidebar-accent"></div>
+        <h2 class="text-white text-3xl font-bold mb-4">
+          競合分析と<br />差別化
+        </h2>
+        <div class="w-16 h-1 bg-white opacity-60"></div>
+        <div class="mt-8 mb-4">
+          <i class="fas fa-balance-scale text-white opacity-80 text-5xl"></i>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">
+          J-AESと競合サービスの比較
+        </h3>
+        <div class="comparison-container">
+          <div class="column left-column">
+            <div class="column-header">
+              <div class="column-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h4 class="text-xl font-semibold text-gray-700">
+                主要競合（汎用代行）
+              </h4>
+            </div>
+            <div class="feature-group">
+              <p class="feature-title">
+                <i class="fas fa-check gold-accent"></i>強み
+              </p>
+              <div class="feature-list">
+                <p class="feature-item">広範な商品カテゴリに対応</p>
+                <p class="feature-item">英語UIによる利便性</p>
+                <p class="feature-item">多数のECサイト・オークションとの連携</p>
+                <p class="feature-item">自動化された配送・決済システム</p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <p class="feature-title">
+                <i class="fas fa-times text-red-500"></i>弱み
+              </p>
+              <div class="feature-list">
+                <p class="feature-item">オーディオ機器に特化したUX不足</p>
+                <p class="feature-item">高額機器の購入サポートが薄い</p>
+                <p class="feature-item">商品の専門的な状態確認・評価に制限</p>
+                <p class="feature-item">複雑な取引における個別対応の柔軟性低</p>
+              </div>
+            </div>
+            <div class="highlight-box mt-6">
+              <p class="text-gray-700 font-medium">主なプレイヤー</p>
+              <p class="text-gray-600 mt-2">
+                Buyee、ZenMarket、Japan Rabbit など
+              </p>
+              <p class="text-gray-600 mt-1 text-sm">
+                ※いずれも総合的な代行サービス
+              </p>
+            </div>
+          </div>
+          <div class="column right-column">
+            <div class="column-header">
+              <div class="column-icon">
+                <i class="fas fa-volume-up"></i>
+              </div>
+              <h4 class="text-xl font-semibold gold-accent">J-AESの差別化</h4>
+            </div>
+            <div class="feature-group">
+              <p class="feature-title">
+                <i class="fas fa-bullseye text-blue-600"></i>オーディオ特化
+              </p>
+              <div class="feature-list">
+                <p class="feature-item">
+                  多言語対応オーディオ専門キュレーションサイト
+                </p>
+                <p class="feature-item">専門知識を持った商品評価と説明</p>
+                <p class="feature-item">音響機器に特化した検索・比較機能</p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <p class="feature-title">
+                <i class="fas fa-link text-blue-600"></i>中古市場との直接連携
+              </p>
+              <div class="feature-list">
+                <p class="feature-item">
+                  日本国内の中古オーディオショップとの提携
+                </p>
+                <p class="feature-item">レア商品の発見性向上と迅速な対応</p>
+                <p class="feature-item">商品状態の詳細確認と品質保証</p>
+              </div>
+            </div>
+            <div class="feature-group">
+              <p class="feature-title">
+                <i class="fas fa-shield-alt text-blue-600"></i
+                >ビジネスモデル最適化
+              </p>
+              <div class="feature-list">
+                <p class="feature-item">在庫リスクゼロの前金制モデル</p>
+                <p class="feature-item">高額商材に最適化した梱包・発送</p>
+                <p class="feature-item">トラブル時の対応力と保証体制</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-6 right-8">
+          <p class="text-gray-400 text-sm">J-AES Business Plan | 10</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
