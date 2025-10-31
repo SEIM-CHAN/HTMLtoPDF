@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>今後のスケジュール - Japan Audio Export Service</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+        background-color: #ffffff;
+        overflow: hidden;
+        display: flex;
+      }
+      .slide-sidebar {
+        width: 300px;
+        background-color: #082044;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .sidebar-accent {
+        position: absolute;
+        width: 8px;
+        height: 180px;
+        background-color: #d4af37;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .gold-accent {
+        color: #d4af37;
+      }
+      .content-wrapper {
+        flex: 1;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        margin: 20px 0;
+      }
+      .timeline-item {
+        background-color: rgba(8, 32, 68, 0.05);
+        border-left: 4px solid #082044;
+        padding: 12px 15px;
+        margin: 8px 0;
+        position: relative;
+      }
+      .timeline-item.active {
+        border-left-color: #d4af37;
+        background-color: rgba(212, 175, 55, 0.1);
+      }
+      .timeline-header {
+        font-weight: 600;
+        color: #082044;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .timeline-header .phase {
+        font-size: 1.1rem;
+      }
+      .timeline-header .target {
+        background-color: #082044;
+        color: white;
+        padding: 2px 10px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+      }
+      .timeline-header .active {
+        background-color: #d4af37;
+      }
+      .milestone-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 5px 0 0 0;
+      }
+      .milestone-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 4px;
+        color: #4a5568;
+      }
+      .milestone-list li i {
+        margin-right: 8px;
+        color: #082044;
+        margin-top: 3px;
+      }
+      .milestone-list li.highlight i {
+        color: #d4af37;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide-sidebar">
+        <div class="sidebar-accent"></div>
+        <h2 class="text-white text-3xl font-bold mb-4">
+          今後の<br />スケジュール
+        </h2>
+        <div class="w-16 h-1 bg-white opacity-60"></div>
+        <div class="mt-8 mb-4">
+          <i class="fas fa-tasks text-white opacity-80 text-5xl"></i>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+          ロードマップとマイルストーン
+        </h3>
+        <div class="chart-container">
+          <canvas id="timelineChart"></canvas>
+        </div>
+        <div class="timeline-items mt-4">
+          <div class="timeline-item active">
+            <div class="timeline-header">
+              <span class="phase">フェーズ1：0〜3ヶ月</span>
+              <span class="target active">初期立ち上げ</span>
+            </div>
+            <ul class="milestone-list">
+              <li class="highlight">
+                <i class="fas fa-check-circle"></i>
+                <p>MVP公開、Webサイト多言語対応完了</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>初期顧客開拓（SNS/コミュニティ）</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>オペレーション整備（購入・発送フロー確立）</p>
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="phase">フェーズ2：4〜6ヶ月</span>
+              <span class="target">月10件達成</span>
+            </div>
+            <ul class="milestone-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>提携ショップ10社獲得</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>安定的な月次10件受注体制確立</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>カスタマーサポート体制の拡充</p>
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="phase">フェーズ3：7〜12ヶ月</span>
+              <span class="target">月20件達成</span>
+            </div>
+            <ul class="milestone-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>提携ショップ/オークション連携拡大</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>物流プロセス最適化による効率向上</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>月次20件の安定受注体制構築</p>
+              </li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="phase">フェーズ4：13〜24ヶ月</span>
+              <span class="target">月50件体制</span>
+            </div>
+            <ul class="milestone-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>自社倉庫モデルのトライアル実施</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>特定商品の在庫保有試験運用</p>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <p>月間50件の処理体制確立</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="absolute bottom-6 right-8">
+          <p class="text-gray-400 text-sm">J-AES Business Plan | 13</p>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const ctx = document.getElementById("timelineChart").getContext("2d");
+
+          const chart = new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: [
+                "フェーズ1：0〜3ヶ月",
+                "フェーズ2：4〜6ヶ月",
+                "フェーズ3：7〜12ヶ月",
+                "フェーズ4：13〜24ヶ月",
+              ],
+              datasets: [
+                {
+                  label: "月間受注目標件数",
+                  data: [5, 10, 20, 50],
+                  backgroundColor: [
+                    "#D4AF37",
+                    "rgba(8, 32, 68, 0.7)",
+                    "rgba(8, 32, 68, 0.8)",
+                    "rgba(8, 32, 68, 0.9)",
+                  ],
+                  borderColor: ["#D4AF37", "#082044", "#082044", "#082044"],
+                  borderWidth: 1,
+                  barPercentage: 0.6,
+                },
+              ],
+            },
+            options: {
+              indexAxis: "y",
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  grid: {
+                    display: true,
+                    color: "rgba(0, 0, 0, 0.1)",
+                  },
+                  title: {
+                    display: true,
+                    text: "月間受注目標件数",
+                    font: {
+                      family: "'Noto Sans JP', sans-serif",
+                      size: 12,
+                    },
+                    color: "#4a5568",
+                  },
+                },
+                y: {
+                  grid: {
+                    display: false,
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      return "目標受注件数: " + context.raw + "件/月";
+                    },
+                  },
+                },
+              },
+            },
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>
