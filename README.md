@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HTML to PDF (gensparkスライド用)
 
 このリポジトリには、genspark で生成された（1ページごとに HTML がある）スライド群を1つのPDFにまとめるスクリプトが含まれています。
@@ -49,3 +50,7 @@ python index.py --keep-temp
 問題が起きたら
 - Playwright の import エラー: `pip install playwright` と `python -m playwright install` を確認してください。
 - PyPDF2 の import エラー: `pip install PyPDF2` を実行してください。
+=======
+# HTMLtoPDF
+App to create PDFs using genspark slide HTML
+>>>>>>> origin/main
